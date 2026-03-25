@@ -5,22 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>丸喜化工科技（上海）有限公司</title>
   <meta name="description" content="丸喜化工科技（上海）有限公司，专注化工行业高端设备代理与技术服务。" />
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
       line-height: 1.7;
       color: #1f2937;
       background: #ffffff;
     }
-    a { text-decoration: none; color: inherit; }
-    .container { width: 92%; max-width: 1200px; margin: 0 auto; }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
     .topbar {
       background: #0f172a;
       color: #cbd5e1;
       font-size: 13px;
     }
+
     .topbar .container {
       display: flex;
       justify-content: space-between;
@@ -33,10 +58,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.96);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid #e5e7eb;
     }
+
     .nav {
       display: flex;
       justify-content: space-between;
@@ -44,16 +70,34 @@
       gap: 20px;
       padding: 18px 0;
     }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
     .logo h1 {
       font-size: 24px;
       color: #0f172a;
       line-height: 1.3;
     }
+
     .logo p {
       font-size: 12px;
       color: #64748b;
       margin-top: 4px;
     }
+
     .menu {
       display: flex;
       gap: 24px;
@@ -62,11 +106,15 @@
       color: #334155;
       align-items: center;
     }
-    .menu a:hover { color: #0f172a; }
+
+    .menu a:hover {
+      color: #0f172a;
+    }
+
     .menu-btn {
       padding: 10px 16px;
       background: #0f172a;
-      color: #fff !important;
+      color: #ffffff !important;
       border-radius: 10px;
     }
 
@@ -74,30 +122,21 @@
       background: linear-gradient(135deg, #f8fafc 0%, #e9eef6 100%);
       padding: 82px 0;
     }
+
     .hero-wrap {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 42px;
       align-items: center;
     }
-    .hero h2 {
-      font-size: 46px;
-      line-height: 1.2;
-      color: #0f172a;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 18px;
-      color: #475569;
-      margin-bottom: 26px;
-      max-width: 680px;
-    }
+
     .hero-tags {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
+
     .hero-tags span {
       background: #ffffff;
       border: 1px solid #dbe2ea;
@@ -106,63 +145,70 @@
       border-radius: 999px;
       font-size: 13px;
     }
+
+    .hero h2 {
+      font-size: 46px;
+      line-height: 1.2;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #475569;
+      margin-bottom: 26px;
+      max-width: 680px;
+    }
+
     .btn-group {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
     }
+
     .btn {
       display: inline-block;
       padding: 12px 22px;
       border-radius: 10px;
       font-size: 15px;
-      transition: .2s ease;
+      transition: 0.2s ease;
     }
+
     .btn-primary {
       background: #0f172a;
       color: #ffffff;
     }
-    .btn-primary:hover { opacity: .9; }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
     .btn-secondary {
       border: 1px solid #cbd5e1;
       background: #ffffff;
       color: #0f172a;
     }
 
-    .hero-card {
+    .hero-image-box {
       background: #ffffff;
       border: 1px solid #e5e7eb;
       border-radius: 22px;
-      padding: 32px;
-      box-shadow: 0 12px 30px rgba(15,23,42,0.06);
-    }
-    .hero-panel {
-      background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 100%);
-      border-radius: 18px;
-      min-height: 320px;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #334155;
-    }
-    .hero-panel-title {
-      font-size: 22px;
-      font-weight: 700;
-      color: #0f172a;
-      line-height: 1.5;
-    }
-    .hero-panel-list {
-      list-style: none;
-      margin-top: 16px;
-    }
-    .hero-panel-list li {
-      padding: 8px 0;
-      border-bottom: 1px dashed rgba(51,65,85,0.15);
-      font-size: 14px;
+      padding: 14px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
     }
 
-    section { padding: 78px 0; }
+    .hero-image-box img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
     .section-subtitle {
       font-size: 13px;
       color: #64748b;
@@ -170,12 +216,14 @@
       text-transform: uppercase;
       letter-spacing: 2px;
     }
+
     .section-title {
       font-size: 34px;
       color: #0f172a;
       margin-bottom: 18px;
       line-height: 1.3;
     }
+
     .section-desc {
       font-size: 16px;
       color: #64748b;
@@ -189,35 +237,41 @@
       gap: 42px;
       align-items: start;
     }
+
     .about-box {
       background: #ffffff;
       border: 1px solid #e5e7eb;
       border-radius: 20px;
       padding: 30px;
-      box-shadow: 0 8px 22px rgba(15,23,42,0.04);
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
     }
+
     .about-text p {
       color: #475569;
       margin-bottom: 14px;
       font-size: 16px;
     }
+
     .stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
+
     .stat-box {
       border: 1px solid #e5e7eb;
       border-radius: 16px;
       padding: 24px;
       background: #ffffff;
-      box-shadow: 0 6px 20px rgba(15,23,42,0.04);
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
     }
+
     .stat-box h3 {
       font-size: 30px;
       color: #0f172a;
       margin-bottom: 8px;
     }
+
     .stat-box p {
       color: #64748b;
       font-size: 14px;
@@ -226,23 +280,27 @@
     .advantages {
       background: #f8fafc;
     }
+
     .card-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
+
     .card {
       background: #ffffff;
       border: 1px solid #e5e7eb;
       border-radius: 18px;
       padding: 24px;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.04);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
     }
+
     .card h3 {
       font-size: 20px;
       margin-bottom: 12px;
       color: #0f172a;
     }
+
     .card p {
       color: #475569;
       font-size: 15px;
@@ -251,39 +309,39 @@
     .products {
       background: #ffffff;
     }
+
     .product-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
+
     .product-card {
       background: #ffffff;
       border: 1px solid #e5e7eb;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 24px rgba(15,23,42,0.04);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
     }
-    .product-image {
+
+    .product-image img {
+      width: 100%;
       height: 165px;
-      background: linear-gradient(135deg, #dfe7f0 0%, #f7fafc 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #475569;
-      font-size: 16px;
-      text-align: center;
-      padding: 20px;
-      font-weight: 600;
+      object-fit: cover;
+      display: block;
     }
+
     .product-content {
       padding: 22px;
     }
+
     .product-content h3 {
       font-size: 19px;
       color: #0f172a;
       margin-bottom: 10px;
       line-height: 1.4;
     }
+
     .product-content p {
       color: #475569;
       font-size: 15px;
@@ -292,11 +350,13 @@
     .industries {
       background: #f8fafc;
     }
+
     .industry-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
     }
+
     .industry-box {
       background: #ffffff;
       border: 1px solid #e5e7eb;
@@ -304,7 +364,7 @@
       text-align: center;
       padding: 24px 12px;
       color: #334155;
-      box-shadow: 0 6px 16px rgba(15,23,42,0.04);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
       font-weight: 600;
     }
 
@@ -313,6 +373,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
+
     .customer-box {
       background: #ffffff;
       border: 1px solid #e5e7eb;
@@ -321,31 +382,35 @@
       padding: 18px 12px;
       color: #334155;
       font-size: 15px;
-      box-shadow: 0 6px 16px rgba(15,23,42,0.04);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
     }
 
     .contact {
       background: #0f172a;
       color: #ffffff;
     }
+
     .contact-wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
       align-items: start;
     }
+
     .contact p {
       color: #cbd5e1;
       margin-bottom: 12px;
     }
+
     .contact-box {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
       padding: 28px;
     }
+
     .contact-box strong {
-      color: #fff;
+      color: #ffffff;
     }
 
     footer {
@@ -362,6 +427,7 @@
       .contact-wrap {
         grid-template-columns: 1fr;
       }
+
       .card-grid,
       .product-grid,
       .industry-grid,
@@ -375,9 +441,11 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
       .menu {
         gap: 14px;
       }
+
       .card-grid,
       .product-grid,
       .industry-grid,
@@ -385,18 +453,30 @@
       .stats {
         grid-template-columns: 1fr;
       }
+
       .hero h2 {
         font-size: 32px;
       }
+
       .hero p {
         font-size: 16px;
       }
+
       .section-title {
         font-size: 28px;
       }
+
       .topbar .container {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .hero-image-box img {
+        height: 260px;
+      }
+
+      .logo h1 {
+        font-size: 20px;
       }
     }
   </style>
@@ -406,16 +486,22 @@
   <div class="topbar">
     <div class="container">
       <div>欢迎访问丸喜化工科技（上海）有限公司</div>
-      <div>电话：+86 (21)64171239　|　邮箱：sunny@fukuichina.cn</div>
+      <div>电话：+86 (21)64171239 ｜ 邮箱：sunny@fukuichina.cn</div>
     </div>
   </div>
 
   <header>
     <div class="container nav">
       <div class="logo">
-        <h1>丸喜化工科技（上海）有限公司</h1>
-        <p>Vanxi Chemical Technologies (Shanghai) Co., Ltd</p>
+        <div class="logo-wrap">
+          <img src="images/logo.png" alt="丸喜化工Logo" class="logo-img" />
+          <div>
+            <h1>丸喜化工科技（上海）有限公司</h1>
+            <p>Vanxi Chemical Technologies (Shanghai) Co., Ltd</p>
+          </div>
+        </div>
       </div>
+
       <nav class="menu">
         <a href="#home">首页</a>
         <a href="#about">公司简介</a>
@@ -434,30 +520,22 @@
           <span>催化剂销售</span>
           <span>现场填装服务</span>
         </div>
+
         <h2>专注化工行业高端设备代理与技术服务</h2>
+
         <p>
           为石油化工、煤化工、新材料及相关工业领域客户提供优质设备、
           专业技术支持与项目服务，持续为客户创造更稳定、更高效的工业配套价值。
         </p>
+
         <div class="btn-group">
           <a class="btn btn-primary" href="#about">了解我们</a>
           <a class="btn btn-secondary" href="#products">查看产品</a>
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="hero-panel">
-          <div>
-            <div class="hero-panel-title">聚焦工业客户需求<br>提供设备供应与服务支持</div>
-            <ul class="hero-panel-list">
-              <li>近十年行业积累</li>
-              <li>覆盖多类高端工业设备</li>
-              <li>服务多家知名化工企业</li>
-              <li>支持技术沟通与售后配合</li>
-            </ul>
-          </div>
-          <div style="font-size:14px; color:#475569;">后续拿到正式图片后，这里可替换成公司形象图或产品图。</div>
-        </div>
+      <div class="hero-image-box">
+        <img src="images/hero.png" alt="丸喜化工首页主图" />
       </div>
     </div>
   </section>
@@ -467,19 +545,19 @@
       <div class="section-subtitle">ABOUT</div>
       <h2 class="section-title">关于丸喜化工</h2>
       <p class="section-desc">
-        丸喜化工科技（上海）有限公司是一家具有独立法人资格的现代化进出口企业，
-        长期专注于化工行业高端设备代理销售、催化剂销售及现场填装服务。
+        丸喜化工科技（上海）有限公司是一家专注于化工行业高端设备代理与技术服务的企业，
+        长期服务于石油化工、煤化工、新材料及相关工业领域客户。
       </p>
 
       <div class="about-grid">
         <div class="about-box about-text">
           <p>
-            公司在全体同仁近十年的持续努力下，已在国外尖端产品代理销售领域建立起良好的口碑及信誉，
-            并与多家国内外知名企业建立了合作关系。
+            公司围绕高端设备代理销售、催化剂销售及现场填装服务等业务方向，
+            致力于为客户提供更高效、更可靠的工业配套支持。
           </p>
           <p>
-            公司坚持高效透明的管理机制与灵活务实的运作方式，以用户高度满意为终极目标，
-            为客户提供设备供应、技术沟通、项目支持及售后服务。
+            依托多年行业积累、务实高效的服务方式和稳定的合作体系，
+            公司已与多家知名企业建立合作关系，并持续推进项目跟踪、技术沟通与售后服务工作。
           </p>
           <p>
             守信用、重合同、为客户提供优质服务，是公司长期坚持的企业宗旨。
@@ -515,6 +593,7 @@
       <p class="section-desc">
         依托丰富的产品线、行业经验和服务能力，为客户提供更高效的项目配套支持。
       </p>
+
       <div class="card-grid">
         <div class="card">
           <h3>聚焦化工行业</h3>
@@ -546,47 +625,59 @@
 
       <div class="product-grid">
         <div class="product-card">
-          <div class="product-image">PALL 增稠器</div>
+          <div class="product-image">
+            <img src="images/product1.png" alt="PALL 增稠器" />
+          </div>
           <div class="product-content">
             <h3>PALL 增稠器</h3>
-            <p>用于从物料中分离催化剂颗粒并提高催化剂浓度，兼具过滤与浓缩功能。</p>
+            <p>适用于相关工艺场景中的物料处理与固液分离配套需求。</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-image">Kilia 300 凝胶切碎机</div>
+          <div class="product-image">
+            <img src="images/product2.png" alt="Kilia 300 凝胶切碎机" />
+          </div>
           <div class="product-content">
             <h3>Kilia 300 凝胶切碎机</h3>
-            <p>适用于相关生产过程中的切碎与预处理，具备程序控制、自动润滑等特点。</p>
+            <p>适用于相关生产过程中的切碎与预处理，具备较强的连续运行能力。</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-image">PALL ZHF液固分离过滤器</div>
+          <div class="product-image">
+            <img src="images/product3.png" alt="PALL ZHF液固分离过滤器" />
+          </div>
           <div class="product-content">
             <h3>PALL ZHF液固分离过滤器</h3>
-            <p>采用滤盘堆叠与旋转清洁结构，适用于液固分离工况。</p>
+            <p>适用于液固分离工况，可满足多类工业场景下的过滤需求。</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-image">伊藤铁工所罗茨风机</div>
+          <div class="product-image">
+            <img src="images/product4.png" alt="伊藤铁工所罗茨风机" />
+          </div>
           <div class="product-content">
             <h3>伊藤铁工所罗茨风机</h3>
-            <p>适用于曝气增氧、反冲洗、助燃增压、脱硫氧化等工业场景。</p>
+            <p>适用于曝气增氧、反冲洗、助燃增压、脱硫氧化等工业应用场景。</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-image">安德里茨桨叶干燥机</div>
+          <div class="product-image">
+            <img src="images/product5.png" alt="安德里茨桨叶干燥机" />
+          </div>
           <div class="product-content">
             <h3>安德里茨桨叶干燥机</h3>
-            <p>适用于膏状、颗粒状、粉状物料处理，传热效率高，适配多类工况。</p>
+            <p>适用于多类物料处理工况，具备良好的传热效率与设备适应性。</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-image">阿特拉斯·科普柯二氧化碳压缩机</div>
+          <div class="product-image">
+            <img src="images/product6.png" alt="阿特拉斯·科普柯二氧化碳压缩机" />
+          </div>
           <div class="product-content">
             <h3>阿特拉斯·科普柯二氧化碳压缩机</h3>
             <p>适用于二氧化碳压缩及相关工业气体应用场景。</p>
