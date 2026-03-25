@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>丸喜化工科技（上海）有限公司</title>
+  <meta name="description" content="丸喜化工科技（上海）有限公司，专注化工行业高端设备代理与技术服务。" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      line-height: 1.7;
+      color: #1f2937;
+      background: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 20px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      color: #0f172a;
+    }
+
+    .logo p {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 15px;
+      color: #334155;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+      padding: 80px 0;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      line-height: 1.25;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #475569;
+      margin-bottom: 28px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 15px;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-secondary {
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #0f172a;
+    }
+
+    .hero-image {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 20px;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+      text-align: center;
+      padding: 20px;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-size: 32px;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 15px;
+      color: #64748b;
+      margin-bottom: 36px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: #475569;
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stat-box {
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 24px;
+      background: #ffffff;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .stat-box h3 {
+      font-size: 30px;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .stat-box p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .advantages {
+      background: #f8fafc;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #0f172a;
+    }
+
+    .card p {
+      color: #475569;
+      font-size: 15px;
+    }
+
+    .products {
+      background: #ffffff;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .product-image {
+      height: 180px;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 16px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .product-content {
+      padding: 22px;
+    }
+
+    .product-content h3 {
+      font-size: 19px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .product-content p {
+      color: #475569;
+      font-size: 15px;
+    }
+
+    .industries {
+      background: #f8fafc;
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .industry-box {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      text-align: center;
+      padding: 24px 12px;
+      color: #334155;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+    }
+
+    .customers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .customer-box {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      text-align: center;
+      padding: 18px 12px;
+      color: #334155;
+      font-size: 15px;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+    }
+
+    .contact {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      margin-bottom: 12px;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      padding: 24px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 992px) {
+      .hero-wrap,
+      .about-grid,
+      .contact-wrap,
+      .card-grid,
+      .product-grid,
+      .industry-grid,
+      .customers-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu {
+        gap: 14px;
+      }
+
+      .hero-wrap,
+      .about-grid,
+      .contact-wrap,
+      .card-grid,
+      .product-grid,
+      .industry-grid,
+      .customers-grid,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <h1>丸喜化工科技（上海）有限公司</h1>
+        <p>Vanxi Chemical Technologies (Shanghai) Co., Ltd</p>
+      </div>
+      <nav class="menu">
+        <a href="#home">首页</a>
+        <a href="#about">公司简介</a>
+        <a href="#products">产品中心</a>
+        <a href="#industries">服务行业</a>
+        <a href="#contact">联系我们</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-wrap">
+      <div>
+        <h2>专注化工行业高端设备代理与技术服务</h2>
+        <p>
+          为石油化工、煤化工、新材料及相关工业领域客户提供优质设备、
+          专业技术支持与项目服务。
+        </p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="#about">了解我们</a>
+          <a class="btn btn-secondary" href="#products">查看产品</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        这里后续可以替换为公司形象图 / 工厂图 / 设备图
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-subtitle">ABOUT</div>
+      <h2 class="section-title">关于丸喜化工</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            丸喜化工科技（上海）有限公司是一家具有独立法人资格的现代化进出口企业，
+            长期专注于化工行业高端设备代理销售、催化剂销售及现场填装服务。
+          </p>
+          <p>
+            公司经过近十年的持续发展，已在行业内建立起良好的信誉与口碑，
+            并与多家国内外知名企业建立合作关系。
+          </p>
+          <p>
+            公司坚持高效透明的管理机制与灵活务实的运作方式，
+            以客户满意为核心目标，为客户提供设备供应、技术沟通与售后支持等综合服务。
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat-box">
+            <h3>3000万</h3>
+            <p>注册资金</p>
+          </div>
+          <div class="stat-box">
+            <h3>16人</h3>
+            <p>专业团队</p>
+          </div>
+          <div class="stat-box">
+            <h3>近10年</h3>
+            <p>行业积累</p>
+          </div>
+          <div class="stat-box">
+            <h3>多行业</h3>
+            <p>客户服务经验</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="advantages">
+    <div class="container">
+      <div class="section-subtitle">ADVANTAGES</div>
+      <h2 class="section-title">我们的优势</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>聚焦化工行业</h3>
+          <p>长期服务化工及相关工业领域客户，理解项目需求与现场工况。</p>
+        </div>
+        <div class="card">
+          <h3>产品线丰富</h3>
+          <p>覆盖过滤、分离、风机、压缩机、混合、干燥、阀门等多个方向。</p>
+        </div>
+        <div class="card">
+          <h3>响应及时</h3>
+          <p>围绕客户需求提供技术交流、项目跟踪与商务支持服务。</p>
+        </div>
+        <div class="card">
+          <h3>技术服务支持</h3>
+          <p>兼具设备销售、催化剂相关服务与售后支持能力。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-subtitle">PRODUCTS</div>
+      <h2 class="section-title">产品中心</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">产品图片位置</div>
+          <div class="product-content">
+            <h3>PALL BYD浓缩过滤器</h3>
+            <p>用于从物料中分离催化剂颗粒并提高催化剂浓度，兼具过滤与浓缩功能。</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">产品图片位置</div>
+          <div class="product-content">
+            <h3>Kilia 300 凝胶切碎机</h3>
+            <p>适用于相关生产过程中的切碎与预处理，具备程序控制等特点。</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">产品图片位置</div>
+          <div class="product-content">
+            <h3>PALL ZHF液固分离过滤器</h3>
+            <p>采用滤盘堆叠与旋转清洁结构，适用于液固分离工况。</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">产品图片位置</div>
+          <div class="product-content">
+            <h3>伊藤铁工所罗茨风机</h3>
+            <p>适用于曝气增氧、反冲洗、助燃增压、脱硫氧化等工业场景。</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">产品图片位置</div>
+          <div class="product-content">
+            <h3>安德里茨桨叶干燥机</h3>
+            <p>适用于膏状、颗粒状、粉状物料处理，传热效率高。</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">产品图片位置</div>
+          <div class="product-content">
+            <h3>阿特拉斯·科普柯二氧化碳压缩机</h3>
+            <p>适用于二氧化碳压缩及相关工业气体应用场景。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="industries" id="industries">
+    <div class="container">
+      <div class="section-subtitle">INDUSTRIES</div>
+      <h2 class="section-title">服务行业</h2>
+      <div class="industry-grid">
+        <div class="industry-box">石油化工</div>
+        <div class="industry-box">煤化工</div>
+        <div class="industry-box">新材料</div>
+        <div class="industry-box">环保工程</div>
+        <div class="industry-box">工业气体</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="customers">
+    <div class="container">
+      <div class="section-subtitle">CUSTOMERS</div>
+      <h2 class="section-title">合作客户</h2>
+      <div class="customers-grid">
+        <div class="customer-box">陕西延长石油集团</div>
+        <div class="customer-box">陕西煤业化工集团</div>
+        <div class="customer-box">中海壳牌石油化工</div>
+        <div class="customer-box">山东华鲁恒升</div>
+        <div class="customer-box">新疆天智辰业化工</div>
+        <div class="customer-box">浙江三维集团</div>
+        <div class="customer-box">桐昆集团</div>
+        <div class="customer-box">更多客户持续更新中</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container contact-wrap">
+      <div>
+        <div class="section-subtitle" style="color:#94a3b8;">CONTACT</div>
+        <h2 class="section-title" style="color:#ffffff;">联系我们</h2>
+        <p>欢迎与我们联系，了解更多产品信息、技术资料及项目合作方案。</p>
+      </div>
+      <div class="contact-box">
+        <p><strong>公司名称：</strong>丸喜化工科技（上海）有限公司</p>
+        <p><strong>英文名称：</strong>Vanxi Chemical Technologies (Shanghai) Co., Ltd</p>
+        <p><strong>联系电话：</strong>+86 (21) 64171239</p>
+        <p><strong>邮箱：</strong>sunny@fukuichina.cn</p>
+        <p><strong>地址：</strong>上海市徐汇区漕宝路80号705-5室</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 丸喜化工科技（上海）有限公司 | 正式上线后再补备案号
+    </div>
+  </footer>
+
+</body>
+</html>
