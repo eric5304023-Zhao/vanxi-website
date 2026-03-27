@@ -915,3 +915,30 @@ footer{
   object-position:center;
   display:block;
 }
+
+.product-grid .product-image{
+  height: 280px !important;
+  background: #f6f8fb !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 18px !important;
+  overflow: hidden !important;
+}
+
+.product-grid .product-image img{
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+@media (max-width: 768px){
+  .product-grid .product-image{
+    height: 220px !important;
+    padding: 14px !important;
+  }
+}
