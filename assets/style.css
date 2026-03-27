@@ -888,3 +888,31 @@ footer{
   object-position:center;
   background:#f6f8fb;
 }
+
+.products .product-card{
+  overflow:hidden;
+}
+
+.products .product-image{
+  height:320px;
+  background:#f6f8fb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.products .product-image img{
+  width:auto !important;
+  height:100% !important;
+  max-width:100% !important;
+  object-fit:contain !important;
+  object-position:center;
+}
+
+@media (max-width:768px){
+  .products .product-image{
+    height:240px;
+    padding:16px;
+  }
+}
