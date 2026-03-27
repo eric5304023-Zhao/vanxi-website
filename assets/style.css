@@ -893,26 +893,25 @@ footer{
   overflow:hidden;
 }
 
+.products .product-card{
+  overflow:hidden;
+}
+
 .products .product-image{
-  height:320px;
+  min-height:260px;
   background:#f6f8fb;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:24px;
+  padding:18px;
+  overflow:hidden;
 }
 
 .products .product-image img{
-  width:auto !important;
-  height:100% !important;
-  max-width:100% !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:260px !important;
   object-fit:contain !important;
   object-position:center;
-}
-
-@media (max-width:768px){
-  .products .product-image{
-    height:240px;
-    padding:16px;
-  }
+  display:block;
 }
