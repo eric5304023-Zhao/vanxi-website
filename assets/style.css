@@ -871,3 +871,20 @@ footer{
 .contact-box strong{
   color:#0f172a !important;
 }
+
+.products .product-image{
+  background:#f6f8fb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  overflow:hidden;
+}
+
+.products .product-image img{
+  width:100%;
+  height:260px;
+  object-fit:contain !important;
+  object-position:center;
+  background:#f6f8fb;
+}
